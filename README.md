@@ -1,9 +1,9 @@
--------------------------
+
 jPlane
 -------------------------
 A simple clone of iCopter in HTML5.
 
---------
+
 License
 --------
 Copyright (c) 2012 Ross Walker (github@rosswalker.me)
