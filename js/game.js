@@ -33,21 +33,23 @@ var reset = function () {
 		
         var render = function () {
                 // Background
-				ctx.fillStyle = "rgb(0, 0, 0)";
+				ctx.fillStyle = "#424242";
 				ctx.fillRect(0, 0, 600, 400);
 				if(menu == 1){
+                                        ctx.fillStyle ="#f8f8f8";
+                                        ctx.fillRect(0, 0, 600, 400);
 					// Title Text is drawn here.
-					ctx.fillStyle = "rgb(17, 234, 0)";
+					ctx.fillStyle = "#424242";
 					ctx.font = "100px Arial";
 					ctx.fillText("jPlane", 150, 400 / 4 + 50); 
-					ctx.fillStyle = "rgb(255, 255, 255)"; 
+					ctx.fillStyle = "#424242"; 
 					//g2d.drawImage(image, 10, 10, null);
 					ctx.font = "20px Arial"; 
 					ctx.fillText("Click to Start!", 600 / 2 - 90, 400 / 4 + 100); 
 					//g2d.drawString("(c) 2012, All Rights Reserved.", 600 / 2 - 30, 400 / 4 + 250); 	
 				}
 				if(game == 1 || crash == 1){
-					ctx.fillStyle = "rgb(17, 234, 0)";
+					ctx.fillStyle = "#f8f8f8";
 					ctx.fillRect(0, 0, 600, 45);
 					ctx.fillRect(0, 355, 600, 45);
 				}
@@ -70,7 +72,7 @@ var reset = function () {
 					if(sm == 1){
 					ctx.fillRect(slowmox1, slowmo1, 10, 10); 
 					}
-					ctx.fillStyle = "rgb(17, 234, 0)";
+					ctx.fillStyle = "#f8f8f8";
 					// Walls
 					ctx.fillRect(wallx1, wall1, 30, 75);
 					ctx.fillRect(wallx2, wall2, 30, 75);
@@ -79,16 +81,15 @@ var reset = function () {
 				
 					// Text on Screen
 					ctx.font = "21px Arial";
-					ctx.fillStyle = "rgb(255, 255, 255)";
+					ctx.fillStyle = "#424242";
 					ctx.fillText("Distance: " + Math.floor((score /2) /3) , (600 / 2) + 125, 25); 
 					ctx.fillText("Gold: " + points, (600 / 2) + 15, 25);
 					ctx.font = "21px Arial";
-					ctx.fillStyle = "rgb(255, 255, 255)";
 					if(!(hscore == 0)){
 						ctx.fillText("Best: " + hscore, (600 / 2) + 125, 385);
 					}
 					// Player
-					ctx.fillStyle = "rgb(0, 50, 177)";
+					ctx.fillStyle = "#ffffff";
 					ctx.fillRect(player.x, player.y, 50, 35);
 					
 				}
@@ -96,12 +97,11 @@ var reset = function () {
 				
 				if(crash == 1){
 					// Moving Sides of Cave are drawn here.
-					ctx.fillStyle = "rgb(17, 234, 0)";
+					ctx.fillStyle = "#f8f8f8";
 					ctx.fillRect(scene2, 0, 650, 50); 
 					ctx.fillRect(scene1, 350, 690, 52); 
 			
 					// Player is redrawn as white.
-					ctx.fillStyle = "rgb(255, 255, 255)";
 					ctx.fillRect(player.x, player.y, 50, 35);
 					
 					// Crash Menu is displayed.
